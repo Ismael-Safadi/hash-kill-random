@@ -36,10 +36,15 @@ import time
 import string
 import argparse
 import itertools
-import winsound
+
 import hashlib
 import random
-
+def sound():
+	try:
+		import winsound
+		winsound.Beep(1000,1000)
+	except:
+		pass
 def hash_kill_random(chrs, the_length, the_number, type_type, myhash):
     
     print ('[i] Starting time: %s' % time.strftime('%H:%M:%S'))
@@ -58,7 +63,7 @@ def hash_kill_random(chrs, the_length, the_number, type_type, myhash):
             print ('[*]Hash is : ' + string_rand)
             print "[*]Time: %s seconds" % round((end - start), 2)
             print "[*]Words tried:" + (str(count))
-            winsound.Beep(1000, 1000)
+            sound()
             break
         else:
             count += 1
