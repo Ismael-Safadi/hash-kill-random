@@ -73,7 +73,7 @@ def hash_kill_random(chrs, the_length, the_number, type_type, myhash):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter,
-        description='Python Wordlist Generator')
+        description='Python hash kill random generatore')
     parser.add_argument(
         '-chr', '--chars',
         default=None, help='characters to iterate')
